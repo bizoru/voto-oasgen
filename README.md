@@ -1,6 +1,6 @@
 ## Aplicacion Voto UDistrital (OASGEN)
 
-	Esta aplicacion ha sido generada automaticamente con [oasgen](https://github.com/udistrital/oasgen)
+Esta aplicacion ha sido generada automaticamente con [oasgen](https://github.com/udistrital/oasgen)
 
 ### Requirements
 You need to install docker and docker-compose
