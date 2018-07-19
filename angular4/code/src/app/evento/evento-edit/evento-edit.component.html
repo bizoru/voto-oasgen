@@ -1,0 +1,92 @@
+<h3>Edici&oacute;n Evento</h3>
+<p-dialog header="Evento" [(visible)]="display">
+  La evento ha sido editada correctamente
+  <p-footer>
+    <button type="button" pButton icon="fa-check" (click)="cerrarDialogo()" label="Cerrar"></button>
+  </p-footer>
+</p-dialog>
+<div class="ui-g">
+  <div class="ui-g-8">
+    <form class="form-horizontal">
+    <!------------------------------------------------>
+
+
+
+    <div class="form-group">
+      <label for="tipo" class="col-sm-2 control-label">Tipo </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="tipo" placeholder="Tipo Evento" required [(ngModel)]="evento.tipo" name="tipo" #tipo="ngModel">
+        <div [hidden]="tipo.valid || tipo.pristine " class="invalid-feedback alert alert-danger">
+            El campo tipo no puede estar vacio
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class="form-group">
+      <label for="modulo" class="col-sm-2 control-label">Modulo </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="modulo" placeholder="Modulo Evento" required [(ngModel)]="evento.modulo" name="modulo" #modulo="ngModel">
+        <div [hidden]="modulo.valid || modulo.pristine " class="invalid-feedback alert alert-danger">
+            El campo modulo no puede estar vacio
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class="form-group">
+      <label for="usuario" class="col-sm-2 control-label">Usuario </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="usuario" placeholder="Usuario Evento" required [(ngModel)]="evento.usuario" name="usuario" #usuario="ngModel">
+        <div [hidden]="usuario.valid || usuario.pristine " class="invalid-feedback alert alert-danger">
+            El campo usuario no puede estar vacio
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="form-group">
+      <label for="fecha" class="col-sm-2 control-label">Fecha</label>
+      <div class="col-sm-10">
+          <date-picker mode="datetime" [(ngModel)]="evento.fecha" name="fecha"></date-picker>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="form-group">
+      <label for="ip" class="col-sm-2 control-label">Ip </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ip" placeholder="Ip Evento" required [(ngModel)]="evento.ip" name="ip" #ip="ngModel">
+        <div [hidden]="ip.valid || ip.pristine " class="invalid-feedback alert alert-danger">
+            El campo ip no puede estar vacio
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!------------------------------------------------>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default" (click)="actualizar(evento)">Actualizar</button>
+          <button type="submit" class="btn btn-default" (click)="regresar()">Cancelar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

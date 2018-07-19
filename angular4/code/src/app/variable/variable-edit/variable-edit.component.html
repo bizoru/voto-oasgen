@@ -1,0 +1,67 @@
+<h3>Edici&oacute;n Variable</h3>
+<p-dialog header="Variable" [(visible)]="display">
+  La variable ha sido editada correctamente
+  <p-footer>
+    <button type="button" pButton icon="fa-check" (click)="cerrarDialogo()" label="Cerrar"></button>
+  </p-footer>
+</p-dialog>
+<div class="ui-g">
+  <div class="ui-g-8">
+    <form class="form-horizontal">
+    <!------------------------------------------------>
+
+
+
+    <div class="form-group">
+      <label for="tipo" class="col-sm-2 control-label">Tipo </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="tipo" placeholder="Tipo Variable" required [(ngModel)]="variable.tipo" name="tipo" #tipo="ngModel">
+        <div [hidden]="tipo.valid || tipo.pristine " class="invalid-feedback alert alert-danger">
+            El campo tipo no puede estar vacio
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class="form-group">
+      <label for="valor" class="col-sm-2 control-label">Valor </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="valor" placeholder="Valor Variable" required [(ngModel)]="variable.valor" name="valor" #valor="ngModel">
+        <div [hidden]="valor.valid || valor.pristine " class="invalid-feedback alert alert-danger">
+            El campo valor no puede estar vacio
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class="form-group">
+      <label for="nombre" class="col-sm-2 control-label">Nombre </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="nombre" placeholder="Nombre Variable" required [(ngModel)]="variable.nombre" name="nombre" #nombre="ngModel">
+        <div [hidden]="nombre.valid || nombre.pristine " class="invalid-feedback alert alert-danger">
+            El campo nombre no puede estar vacio
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!------------------------------------------------>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default" (click)="actualizar(variable)">Actualizar</button>
+          <button type="submit" class="btn btn-default" (click)="regresar()">Cancelar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
